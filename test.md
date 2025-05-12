@@ -87,11 +87,11 @@ def delete(node, value):
         #     min_larger_node = min_larger_node.left  # move
         # node.data = min_larger_node.data
         # node.right = delete(node.right, min_larger_node.data)
-        max_smallre_node = node.left
-        while max_smallre_node.right:
-            max_smallre_node = max_smallre_node.right  # move
-        node.data = max_smallre_node.data
-        node.left = delete(node.left, max_smallre_node.data)
+        max_smaller_node = node.left
+        while max_smaller_node.right:
+            max_smaller_node = max_smaller_node.right  # move
+        node.data = max_smaller_node.data
+        node.left = delete(node.left, max_smaller_node.data)
     return node
 
 
